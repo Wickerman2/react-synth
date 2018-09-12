@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
+import Tone from 'tone';
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+
+    let synth = new Tone.Synth().toMaster()
+    synth.triggerAttackRelease('C4', '8n')
+  };
+
+  
+  
   render() {
     return (
       <div className="App">
